@@ -2,7 +2,7 @@
 
 > TRANSLATOR NOTES: This is a repo for translating WAI-ARIA 1.1 REC into Chinese https://aliyun-apsarax-translators.github.io/aria/aria/aria.html. The source file is [`aria/aria.html`](https://github.com/aliyun-apsarax-translators/aria/blob/gh-pages/aria/aria.html) and pull requests welcome. The English version is on [`1.1`](https://github.com/aliyun-apsarax-translators/aria/blob/1.1/aria/aria.html) branch.
 >
-> Please check out the wiki page before you start: https://github.com/aliyun-apsarax-translators/aria/wiki
+> **Please check out the wiki page before you start: https://github.com/aliyun-apsarax-translators/aria/wiki**
 
 This repository maintains specifications and related publications for the Accessible Rich Internet Applications suite of technologies. This is developed by the [ARIA Working Group](http://www.w3.org/WAI/ARIA/). The staff contact is [Michael Cooper](http://www.w3.org/People/cooper/). Please do not provide commit access to this repository without coordination.
 
