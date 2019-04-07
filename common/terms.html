@@ -1,30 +1,30 @@
-<p>While some terms are defined in place, the following definitions are used throughout this document. </p>
+<p>在一些术语已经在所在位置被定义的同时，下列定义会适用于整份文档。</p>
 <dl class="termlist">
-    <dt><dfn data-lt="accessibility api|accessibility apis">Accessibility <abbr title="Application Programming Interface">API</abbr></dfn></dt>
+    <dt><dfn data-lt="accessibility api|accessibility apis">无障碍 <abbr title="Application Programming Interface">API</abbr></dfn></dt>
     <dd>
-      <p>Operating systems and other platforms provide a set of interfaces that expose information about <a class="termref" data-lt="object">objects</a> and <a class="termref" data-lt="event">events</a> to <a>assistive technologies</a>. Assistive technologies use these interfaces to get information about and interact with those <a class="termref" data-lt="widget">widgets</a>. Examples of accessibility APIs are <a href="https://msdn.microsoft.com/en-us/library/ms697270(VS.85).aspx">Microsoft Active Accessibility</a> [[MSAA]], <a href="https://msdn.microsoft.com/en-us/library/ee684013%28VS.85%29.aspx">Microsoft User Interface Automation</a> [[UI-AUTOMATION]], <abbr title="Microsoft Active Accessibility">MSAA</abbr> with <cite><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898(v=vs.85).aspx"><abbr title="User Interface Automation">UIA</abbr> Express</a></cite> [[UIA-EXPRESS]], the
-      	<a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSAccessibility_Protocol/index.html">Mac <abbr title="OS Ten">OS X</abbr> Accessibility Protocol</a> [[AXAPI]], the <cite><a href="https://developer.gnome.org/atk/unstable/">Linux/Unix Accessibility Toolkit</a></cite> [[ATK]] and <cite><a href="https://developer.gnome.org/libatspi/stable/">Assistive Technology Service Provider Interface</a></cite> [[AT-SPI]], and <a href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/start">IAccessible2</a> [[IAccessible2]].</p>
+      <p>操作系统和其它平台提供了一套给<a>辅助技术</a>暴露<a class="termref" data-lt="object">对象</a>和<a class="termref" data-lt="event">事件</a>信息的接口。辅助技术使用这些接口来获取相关信息并和那些<a class="termref" data-lt="widget">挂件</a>进行交互。无障碍 API 的例子有 <a href="https://msdn.microsoft.com/en-us/library/ms697270(VS.85).aspx">微软主动式无障碍</a> [[MSAA]]、<a href="https://msdn.microsoft.com/en-us/library/ee684013%28VS.85%29.aspx">微软用户接口自动化</a> [[UI-AUTOMATION]]、<abbr title="微软主动式无障碍">MSAA</abbr> 和 <cite><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898(v=vs.85).aspx"><abbr title="用户接口自动化">UIA</abbr> 直达</a></cite> [[UIA-EXPRESS]]、
+        <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSAccessibility_Protocol/index.html">Mac <abbr title="OS Ten">OS X</abbr> 无障碍协议</a> [[AXAPI]]、<cite><a href="https://developer.gnome.org/atk/unstable/">Linux/Unix 无障碍工具集</a></cite> [[ATK]] 和 <cite><a href="https://developer.gnome.org/libatspi/stable/">辅助技术服务提供者接口</a></cite> [[AT-SPI]] 以及 <a href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/start">IAccessible2</a> [[IAccessible2]]。</p>
     </dd>
-    <dt><dfn>Accessibility Subtree</dfn></dt>
+    <dt><dfn>无障碍子树</dfn></dt>
     <dd>
-      <p>An <a>accessible object</a> in the <a>accessibility tree</a> and its descendants in that tree. It does not include objects which have relationships other than parent-child in that tree. For example, it does not include objects linked via <pref>aria-flowto</pref> unless those objects are also descendants in the <a>accessibility tree</a>.</p>
+      <p><a>无障碍树</a>中的一个<a>无障碍对象</a>以及它在那棵树中的后代。它不包含那棵树中父-子关系之外的对象。例如不包含通过 <pref>aria-flowto</pref> 链接起来的那些对象，除非那些对象同时也是这棵<a>无障碍树</a>的后代。</p>
     </dd>
-    <dt><dfn>Accessibility Tree</dfn></dt>
+    <dt><dfn>无障碍树</dfn></dt>
     <dd>
-      <p>Tree of <a class="termref" data-lt="accessible object">accessible objects</a> that represents the structure of the user interface (UI). Each node in the accessibility tree represents an element in the <abbr title="user interface">UI</abbr> as exposed through the <a>accessibility <abbr title="Application Programming Interface">API</abbr></a>; for example, a push button, a check box, or container.</p>
+      <p><a class="termref" data-lt="accessible object">无障碍对象</a>的树，表现了用户界面 (UI) 的结构。无障碍树里的每个结点都表现了一个 <abbr title="用户界面">UI</abbr> 中的元素，并通过<a>无障碍 <abbr title="Application Programming Interface (用户程序接口)">API</abbr></a> 暴露出来；例如一个按钮、一个复选框或容器。</p>
     </dd>
-    <dt><dfn>Accessible Description</dfn></dt>
+    <dt><dfn>无障碍描述</dfn></dt>
     <dd>
-      <p>An accessible description provides additional information, related to an interface element, that complements the <a>accessible name</a>. The accessible description might or might not be visually perceivable. </p>
+      <p>一段提供了额外信息的无障碍描述，关联到一个界面上的元素，作为<a>无障碍名称</a>的补充。无障碍描述可以是视觉上可接收的，也可以不是。</p>
     </dd>
-	<dt><dfn data-lt="accessible name|accessible names">Accessible Name</dfn></dt>
+	<dt><dfn data-lt="accessible name|accessible names">无障碍名称</dfn></dt>
     <dd>
-      <p>The accessible name is the name of a user interface element. Each platform <a>accessibility <abbr title="application programming interface">API</abbr></a> provides the accessible name property. The value of the accessible name may be derived from a visible (e.g., the visible text on a button) or invisible (e.g., the text alternative that describes an icon) property of the user interface element.  See related <a>accessible description</a>.</p>
-      <p>A simple use for the accessible name property may be illustrated by an &quot;OK&quot; button. The text &quot;OK&quot; is the accessible name. When the button receives focus, assistive technologies may concatenate the platform's role description with the accessible name. For example, a screen reader may speak &quot;push-button OK&quot; or &quot;OK button&quot;. The order of concatenation and specifics of the role description (e.g., &quot;button&quot;, &quot;push-button&quot;, &quot;clickable button&quot;) are determined by platform <a class="termref" data-lt="accessibility api">accessibility API</a>s or <a>assistive technologies</a>.</p>
+      <p>无障碍名称是一个用户界面元素的名称。每个平台的<a>无障碍 <abbr title="application programming interface (用户程序接口)">API</abbr></a> 都提供了无障碍名称的属性。无障碍名称的值可以源自用户界面元素上可见的 (例如可见的文本或按钮) 或不可见的 (例如描述一个图标的文本替代品) 属性。请查阅<a>无障碍描述</a>。</p>
+      <p>无障碍名称属性的一个简单的用法可能是通过一个 &quot;OK&quot; 按钮来说明。它的文本 &quot;OK&quot; 是无障碍名称。当按钮接收到焦点时，辅助技术可以把平台的角色描述和无障碍名称衔接起来。例如一个读屏软件可以念作 &quot;电钮 OK&quot; 或 &quot;OK 按钮&quot;。衔接的顺序和具体的角色描述 (例如 &quot;按钮&quot;、&quot;电钮&quot;、&quot;可点击的按钮&quot;) 由平台的<a class="termref" data-lt="accessibility api">无障碍 API</a> 或<a>辅助技术</a>来决定。</p>
     </dd>
-	<dt><dfn data-lt="accessible object|accessible objects">Accessible object</dfn></dt>
+	<dt><dfn data-lt="accessible object|accessible objects">无障碍对象</dfn></dt>
     <dd>
-      <p>A <a>node</a> in the <a>accessibility tree</a> of a platform <a>accessibility <abbr title="application programming interface">API</abbr></a>. Accessible objects expose various <a class="termref" data-lt="state">states</a>, <a class="termref" data-lt="property">properties</a>, and <a class="termref" data-lt="event">events</a> for use by <a>assistive technologies</a>.  In the context of markup languages (e.g., HTML and SVG) in general, and of WAI-ARIA in particular, markup <a class="termref" data-lt="element">elements</a> and their <a class="termref" data-lt="attribute">attributes</a> are represented as accessible objects.  </p>
+      <p>一个平台的<a>无障碍 <abbr title="application programming interface (应用程序接口)">API</abbr></a> 的<a>无障碍树</a>中的一个<a>结点</a>。无障碍对象暴露了若干个<a class="termref" data-lt="state">状态</a>、<a class="termref" data-lt="property">属性</a>和<a class="termref" data-lt="event">事件</a>为<a>辅助技术</a>所用。一般在标记语言、尤其是 WAI-ARIA 的上下文中 (例如 HTML 和 SVG)，标记<a class="termref" data-lt="element">元素</a>及其<a class="termref" data-lt="attribute">特性</a>会被展示为无障碍对象。</p>
     </dd>
     <dt><dfn>Activation behavior</dfn></dt>
     <dd>
