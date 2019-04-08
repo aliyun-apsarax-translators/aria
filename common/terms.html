@@ -30,44 +30,43 @@
     <dd>
       <p>The action taken when an <a>event</a>, typically initiated by users through an input device, causes an element to fulfill a defined role. The role may be defined for that element by the host language, or by author-defined variables, or both. The role for any given element may be a generic action, or may be unique to that element. For example, the activation behavior of an <abbr title="Hypertext Markup Language">HTML</abbr> or <abbr title="Scalable Vector Graphics">SVG</abbr> <code>&lt;a&gt;</code> element shall be to cause the user agent to traverse the link specified in the <code>href</code> attribute, with the further optional parameter of specifying the browsing context for the traversal (such as the current window or tab, a named window, or a new window); the activation behavior of an <abbr title="Hypertext Markup Language">HTML</abbr> <code>&lt;input&gt;</code> element with the <code>type</code> attribute value <code>submit</code> shall be to send the values of the form elements to an author-defined <abbr title="Internationalized Resource Identifiers">IRI</abbr> by the author-defined <abbr title="Hypertext Transfer Protocol">HTTP</abbr> method.</p>
     </dd>
-    <dt><dfn data-lt="assistive technology">Assistive Technologies</dfn></dt>
-    <dd><p>Hardware and/or software that:</p>
-			<ul>
-				<li>relies on services provided by a <a>user agent</a> to retrieve and render Web content </li>
-				<li>works with a user agent or web content itself through the use of APIs, and</li>
-				<li>provides services beyond those offered by the user agent to facilitate user interaction with web content by people with disabilities</li>
-			</ul>
-      <p>This definition may differ from that used in other documents.</p>
-    <p>Examples of assistive technologies that are important in the context
-      of this document include the following:</p>
+    <dt><dfn data-lt="assistive technology">辅助技术</dfn></dt>
+    <dd><p>硬件或软件满足：</p>
+      <ul>
+        <li>依赖一个<a>用户代理</a>提供的服务来获取和渲染 web 内容</li>
+        <li>通过使用 API 和一个用户代理或 web 内容本身工作在一起，以及</li>
+        <li>超越用户代理提供的东西来提供服务，促进有障碍的用户和 web 内容互动</li>
+      </ul>
+      <p>这个定义可能不同于其它文档。</p>
+    <p>在文档上下文中非常重要的辅助技术的例子有：</p>
     <ul>
-      <li>screen magnifiers, which are used to enlarge and improve the visual readability of rendered text and images;</li>
-      <li>screen readers, which are most-often used to convey information through synthesized speech or a refreshable Braille display;</li>
-      <li>text-to-speech software, which is used to convert text into synthetic speech;</li>
-      <li>speech recognition software, which is used to allow spoken control and dictation;</li>
-      <li>alternate input technologies (including head pointers, on-screen keyboards, single switches, and sip/puff devices), which are used to simulate the keyboard;</li>
-      <li>alternate pointing devices, which are used to simulate mouse pointing and clicking.</li>
+      <li>屏幕放大器，用来放大并改善被渲染文本和图片的视觉可读性；</li>
+      <li>屏幕阅读器，经常用来把信息转换成为合成语音或可刷新的盲文展示；</li>
+      <li>文本转语音软件，用来把文本转换成为合成语音；</li>
+      <li>语音识别软件，允许语音控制和叙述；</li>
+      <li>替代输入的技术 (包括头动指针、屏幕上的虚拟键盘、单项开关和呼/吸控制设备)，用来模拟键盘；</li>
+      <li>替代指针的设备，用来模拟鼠标和点击。</li>
     </ul>
     </dd>
     <dt><dfn data-lt="attribute|attributes">Attribute</dfn></dt>
     <dd>
-      <p>In this specification, attribute is used as it is in markup languages. Attributes are structural features added to <a class="termref" href="#dfn-element">elements</a> to provide information about the <a class="termref" href="#dfn-state">states</a> and <a class="termref" href="#dfn-property">properties</a> of the <a class="termref" href="#dfn-object">object</a> represented by the element.</p>
+      <p>在这份规范里，attribute 和其在标记语言中的用法一样。Attribute 是添加在<a class="termref" href="#dfn-element">元素</a>上的结构化的特性，提供该元素展示的<a class="termref" href="#dfn-object">对象</a>的<a class="termref" href="#dfn-state">状态</a>和<a class="termref" href="#dfn-property">属性</a>。</p>
     </dd>
-    <dt><dfn data-lt="class|classes">Class</dfn></dt>
+    <dt><dfn data-lt="class|classes">类</dfn></dt>
     <dd>
-      <p>A set of instance <a class="termref" href="#dfn-object">objects</a> that share similar characteristics.</p>
+      <p>一组共享相同特征的实例<a class="termref" href="#dfn-object">对象</a>。</p>
     </dd>
-    <dt><dfn data-lt="deprecated|deprecate|deprecation">Deprecated</dfn></dt>
+    <dt><dfn data-lt="deprecated|deprecate|deprecation">已废弃</dfn></dt>
     <dd>
-      <p>A deprecated <a class="termref" href="#dfn-role">role</a>, <a class="termref" href="#dfn-state">state</a>, or <a class="termref" href="#dfn-property">property</a> is one which has been outdated by newer constructs or changed circumstances, and which may be removed in future versions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification. <a class="termref" data-lt="user agent">User agents</a> are encouraged to continue to support items identified as deprecated for backward compatibility. For more information, see <a href="#deprecated">Deprecated Requirements</a> in the Conformance section.</p>
+      <p>一个已废弃的<a class="termref" href="#dfn-role">角色</a>、<a class="termref" href="#dfn-state">状态</a>或<a class="termref" href="#dfn-property">属性</a>是已经因构造了更新的或情况发生变化而陈旧的，并在将来的版本中可能被移除的 <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 规范。<a class="termref" data-lt="user agent">用户代理</a>被鼓励继续支持被定位已废弃的项目，以获得更好的向后兼容性。更多信息参见一致性章节的<a href="#deprecated">已废弃的要求</a>。</p>
     </dd>
-    <dt><dfn>Desktop focus event</dfn></dt>
+    <dt><dfn>桌面聚焦事件</dfn></dt>
     <dd>
-      <p>Event from/to the host operating system via the accessibility <abbr title="application programming interface">API</abbr>, notifying of a change of input focus.</p>
+      <p>通过无障碍 <abbr title="application programming interface">API</abbr> 来/到宿主操作系统的事件，提示输入焦点的改变。</p>
     </dd>
-    <dt><dfn data-lt="element|elements|element's">Element</dfn></dt>
+    <dt><dfn data-lt="element|elements|element's">元素</dfn></dt>
     <dd>
-      <p>In this specification, element is used as it is in markup languages. Elements are the structural elements in markup language that contains the data profile for <a class="termref" data-lt="object">objects</a>.</p>
+      <p>在这份规范里，元素和其在标记语言中的用法一样。元素是为<a class="termref" data-lt="object">对象</a>包含数据情况的结构化的标记语言元素。</p>
     </dd>
     <dt><dfn data-lt="event|events">Event</dfn></dt>
     <dd>
