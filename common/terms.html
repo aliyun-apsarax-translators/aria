@@ -1,6 +1,6 @@
 <p>在一些术语已经在所在位置被定义的同时，下列定义会适用于整份文档。</p>
 <dl class="termlist">
-    <dt><dfn data-lt="accessibility api|accessibility apis">无障碍 <abbr title="Application Programming Interface">API</abbr></dfn></dt>
+    <dt><dfn data-lt="accessibility api|accessibility apis">无障碍 <abbr title="Application Programming Interface (应用程序接口)">API</abbr></dfn></dt>
     <dd>
       <p>操作系统和其它平台提供了一套给<a>辅助技术</a>暴露<a class="termref" data-lt="object">对象</a>和<a class="termref" data-lt="event">事件</a>信息的接口。辅助技术使用这些接口来获取相关信息并和那些<a class="termref" data-lt="widget">挂件</a>进行交互。无障碍 API 的例子有 <a href="https://msdn.microsoft.com/en-us/library/ms697270(VS.85).aspx">微软主动式无障碍</a> [[MSAA]]、<a href="https://msdn.microsoft.com/en-us/library/ee684013%28VS.85%29.aspx">微软用户接口自动化</a> [[UI-AUTOMATION]]、<abbr title="微软主动式无障碍">MSAA</abbr> 和 <cite><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898(v=vs.85).aspx"><abbr title="用户接口自动化">UIA</abbr> 直达</a></cite> [[UIA-EXPRESS]]、
         <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSAccessibility_Protocol/index.html">Mac <abbr title="OS Ten">OS X</abbr> 无障碍协议</a> [[AXAPI]]、<cite><a href="https://developer.gnome.org/atk/unstable/">Linux/Unix 无障碍工具集</a></cite> [[ATK]] 和 <cite><a href="https://developer.gnome.org/libatspi/stable/">辅助技术服务提供者接口</a></cite> [[AT-SPI]] 以及 <a href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/start">IAccessible2</a> [[IAccessible2]]。</p>
@@ -11,7 +11,7 @@
     </dd>
     <dt><dfn>无障碍树</dfn></dt>
     <dd>
-      <p><a class="termref" data-lt="accessible object">无障碍对象</a>的树，表现了用户界面 (UI) 的结构。无障碍树里的每个结点都表现了一个 <abbr title="用户界面">UI</abbr> 中的元素，并通过<a>无障碍 <abbr title="Application Programming Interface (用户程序接口)">API</abbr></a> 暴露出来；例如一个按钮、一个复选框或容器。</p>
+      <p><a class="termref" data-lt="accessible object">无障碍对象</a>的树，表现了用户界面 (UI) 的结构。无障碍树里的每个结点都表现了一个 <abbr title="用户界面">UI</abbr> 中的元素，并通过<a>无障碍 <abbr title="Application Programming Interface (应用程序接口)">API</abbr></a> 暴露出来；例如一个按钮、一个复选框或容器。</p>
     </dd>
     <dt><dfn>无障碍描述</dfn></dt>
     <dd>
@@ -19,7 +19,7 @@
     </dd>
 	<dt><dfn data-lt="accessible name|accessible names">无障碍名称</dfn></dt>
     <dd>
-      <p>无障碍名称是一个用户界面元素的名称。每个平台的<a>无障碍 <abbr title="application programming interface (用户程序接口)">API</abbr></a> 都提供了无障碍名称的属性。无障碍名称的值可以源自用户界面元素上可见的 (例如可见的文本或按钮) 或不可见的 (例如描述一个图标的文本替代品) 属性。请查阅<a>无障碍描述</a>。</p>
+      <p>无障碍名称是一个用户界面元素的名称。每个平台的<a>无障碍 <abbr title="application programming interface (应用程序接口)">API</abbr></a> 都提供了无障碍名称的属性。无障碍名称的值可以源自用户界面元素上可见的 (例如可见的文本或按钮) 或不可见的 (例如描述一个图标的文本替代品) 属性。请查阅<a>无障碍描述</a>。</p>
       <p>无障碍名称属性的一个简单的用法可能是通过一个 &quot;OK&quot; 按钮来说明。它的文本 &quot;OK&quot; 是无障碍名称。当按钮接收到焦点时，辅助技术可以把平台的角色描述和无障碍名称衔接起来。例如一个读屏软件可以念作 &quot;电钮 OK&quot; 或 &quot;OK 按钮&quot;。衔接的顺序和具体的角色描述 (例如 &quot;按钮&quot;、&quot;电钮&quot;、&quot;可点击的按钮&quot;) 由平台的<a class="termref" data-lt="accessibility api">无障碍 API</a> 或<a>辅助技术</a>来决定。</p>
     </dd>
 	<dt><dfn data-lt="accessible object|accessible objects">无障碍对象</dfn></dt>
@@ -84,7 +84,7 @@
     <dd>
         <p>表示这个<a>元素</a>对<em>任何</em>用户来说都是不可见的、不<a>可察觉的</a>、也不可交互的。一个<em>隐藏</em>元素是指它或它的上层祖先元素没有被渲染或明确被隐藏。</p>
     </dd>
-    <dt><dfn data-lt="informative|non-normative">有用信息</dfn></dt>
+    <dt><dfn data-lt="informative|non-normative">提供有用信息的</dfn></dt>
     <dd>
       <p>提供信息且不要求一致性的内容。要求一致性的内容会被认为是<a>规范的</a>。</p>
     </dd>
@@ -108,42 +108,42 @@
     <dd>
       <p>被用户代理控制的<a>无障碍 API</a> <a>状态</a>，例如焦点和选择。它们会和被作者控制的&quot;不被管理的状态&quot;放在一起考虑。尽管如此，作者可以覆写一些被管理的状态，例如 aria-posinset 和 aria-setsize。很多被管理的状态有相应的例如 :focus 的 CSS 伪类和例如 ::selection 的 CSS 伪元素，它们同样会被用户代理更新。</p>
     </dd>
-    <dt><dfn>Nemeth Braille</dfn></dt>
+    <dt><dfn>内梅斯布莱叶</dfn></dt>
     <dd>
-        <p>The Nemeth Braille Code for Mathematics is a braille code for encoding mathematical and scientific notation. See <cite><a href="https://en.wikipedia.org/wiki/Nemeth_Braille">Nemeth Braille on Wikipedia</a>.</cite></p>
+        <p>内梅斯布莱叶数学码 (Nemeth Braille Code for Mathematics) 是一种为数学和科学符号编码的盲文。查阅<cite><a href="https://en.wikipedia.org/wiki/Nemeth_Braille">维基百科上的 Nemeth Braille</a>了解更多。</cite></p>
     </dd>
-    <dt><dfn>Node</dfn></dt>
+    <dt><dfn>结点</dfn></dt>
     <dd>
-      <p>Basic type of <a class="termref">object</a> in the <abbr title="Document Object Model">DOM</abbr> tree or <a class="termref">accessibility tree</a>. <abbr title="Document Object Model">DOM</abbr> nodes are further specified as <a class="termref">Element</a> or <a class="termref" data-lt="Text node">Text nodes</a>, among other types. The nodes of an <a class="termref">accessibility tree</a> are <a class="termref" data-lt="accessible object">accessible objects</a>.  </p>
+      <p><abbr title="Document Object Model">DOM</abbr> 树或<a class="termref">无障碍树</a>中的<a class="termref">对象</a>的基本类型。由 <abbr title="Document Object Model">DOM</abbr> 结点再指定，就包括了<a class="termref">元素</a>或<a class="termref" data-lt="Text node">文本结点</a>。一个<a class="termref">无障碍树</a>上的结点是<a class="termref" data-lt="accessible object">无障碍对象</a>。</p>
     </dd>
-    <dt><dfn>Normative</dfn></dt>
+    <dt><dfn>规范的</dfn></dt>
     <dd>
-      <p>Required for conformance. By contrast, content identified as <a>informative</a> or &quot;non-normative&quot; is not required for conformance.</p>
+      <p>有一致性的要求。相对来说，被认为<a>提供有用信息的</a>或“不规范的”内容是不要求一致性的。</p>
     </dd>
-    <dt><dfn data-lt="object|objects">Object</dfn></dt>
+    <dt><dfn data-lt="object|objects">对象</dfn></dt>
     <dd>
-      <p>In the context of user interfaces,  an item in the   perceptual user experience, represented in markup languages by one or   more <a class="termref" data-lt="element">elements</a>, and rendered by <a class="termref" data-lt="user agent">user agents</a>.</p>
-    In the context of programming, the instantiation of one or more <a class="termref" data-lt="class">classes</a> and interfaces which define the general characteristics of similar objects. An object in an <a>accessibility <abbr title="Application Programming Interfaces">API</abbr></a> may represent one or more DOM objects. <a class="termref" data-lt="accessibility api">Accessibility APIs</a> have defined interfaces that are distinct from DOM interfaces.</dd>
-  
-    <dt><dfn>Ontology</dfn></dt>
+      <p>在用户界面的上下文中，是一个具有可感知用户体验，在标记语言中以一个或多个<a class="termref" data-lt="element">元素</a>呈现，且被<a class="termref" data-lt="user agent">用户代理</a>渲染的项目。</p>
+      <p>在编程的上下文中，是一个或多个<a class="termref" data-lt="class">类</a>和定义类似对象一般化特征的接口的实例化。一个<a>无障碍 <abbr title="Application Programming Interfaces (应用程序接口)">API</abbr></a> 可能体现了一个或多个 DOM 对象。<a class="termref" data-lt="accessibility api">无障碍 API</a> 定义了区别于 DOM 接口的接口。</p>
+    </dd>  
+    <dt><dfn>本体论</dfn></dt>
     <dd>
-      <p>A description of the characteristics of <a class="termref" data-lt="class">classes</a> and how they relate to each other.</p>
+      <p>一段<a class="termref" data-lt="class">类</a>的特征的描述以及它们之间如何相关联。</p>
     </dd>
-    <dt><dfn>Operable</dfn></dt>
+    <dt><dfn>可操作</dfn></dt>
     <dd>
-      <p>Usable by users in ways they can control. References in this document relate to <cite><a href="http://www.w3.org/TR/WCAG20/#operable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0 Principle 2: Content must be operable</a></cite> [[WCAG20]]. See <a>Keyboard Accessible</a>.</p>
+      <p>可以以用户可以控制的方式使用。这份文档中的引用关联了 <cite><a href="https://www.w3.org/Translations/WCAG20-zh/#operable"><abbr title="Web Content Accessibility Guidelines (网页内容无障碍指南)">WCAG</abbr> 2.0 原则2：可操作性-内容必须可操作</a></cite> [[WCAG20]]。更多可查阅<a>键盘无障碍</a>。</p>
     </dd>
-    <dt><dfn data-lt="owned element|owned|owned element's|owned elements">Owned Element</dfn></dt>
+    <dt><dfn data-lt="owned element|owned|owned element's|owned elements">被拥有的元素</dfn></dt>
     <dd>
-      <p>An 'owned element' is any <abbr title="Document Object Model">DOM</abbr> descendant of the <a>element</a>, any element specified as a child via <pref>aria-owns</pref>, or any <abbr title="Document Object Model">DOM</abbr> descendant of the owned child.</p>
+      <p>一个“被拥有的元素”是这个<a>element</a>的任何 <abbr title="Document Object Model (文档对象模型)">DOM</abbr> 后代、任何通过 <pref>aria-owns</pref> 指定为子元素的元素、或这个被拥有的子元素的任何 <abbr title="Document Object Model (文档对象模型)">DOM</abbr> 后代。</p>
     </dd>
-    <dt><dfn data-lt="owning element|owning">Owning Element</dfn></dt>
+    <dt><dfn data-lt="owning element|owning">拥有元素</dfn></dt>
     <dd>
-      <p>An 'owning element' is any <abbr title="Document Object Model">DOM</abbr> ancestor of the <a>element</a>, or any element with an <pref>aria-owns</pref> attribute which references the ID of the   element. </p>
+      <p>一个“拥有元素”是这个<a>元素</a>的任一 <abbr title="Document Object Model (文档对象模型)">DOM</abbr> 的祖先、或任何带有引用这个元素的一个 <pref>aria-owns</pref> attribute 的元素。</p>
     </dd>
-    <dt><dfn>Perceivable</dfn></dt>
+    <dt><dfn>可感知</dfn></dt>
     <dd>
-      <p>Presentable to users in ways they can sense. References in this document relate to <cite><a href="http://www.w3.org/TR/WCAG20/#perceivable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0 Principle 1: Content must be perceivable</a></cite> [[WCAG20]].</p>
+      <p>可以以用户可以感受到方式展示出来。这份文档中的引用关联了 <cite><a href="https://www.w3.org/Translations/WCAG20-zh/#perceivable"><abbr title="Web Content Accessibility Guidelines (网页内容无障碍指南)">WCAG</abbr> 2.0 原则1：可感知性-内容必须可感知</a></cite> [[WCAG20]]。</p>
     </dd>
     <dt><dfn data-lt="property|properties">Property</dfn></dt>
     <dd>
