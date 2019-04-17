@@ -19,12 +19,12 @@
     </dd>
 	<dt><dfn data-lt="accessible name|accessible names">无障碍名称</dfn></dt>
     <dd>
-      <p>无障碍名称是一个用户界面元素的名称。每个平台的<a>无障碍 <abbr title="application programming interface (应用程序接口)">API</abbr></a> 都提供了无障碍名称的属性。无障碍名称的值可以源自用户界面元素上可见的 (例如可见的文本或按钮) 或不可见的 (例如描述一个图标的文本替代品) 属性。请查阅<a>无障碍描述</a>。</p>
-      <p>无障碍名称属性的一个简单的用法可能是通过一个 &quot;OK&quot; 按钮来说明。它的文本 &quot;OK&quot; 是无障碍名称。当按钮接收到焦点时，辅助技术可以把平台的角色描述和无障碍名称衔接起来。例如一个读屏软件可以念作 &quot;电钮 OK&quot; 或 &quot;OK 按钮&quot;。衔接的顺序和具体的角色描述 (例如 &quot;按钮&quot;、&quot;电钮&quot;、&quot;可点击的按钮&quot;) 由平台的<a class="termref" data-lt="accessibility api">无障碍 API</a> 或<a>辅助技术</a>来决定。</p>
+      <p>无障碍名称是一个用户界面元素的名称。每个平台的<a>无障碍 <abbr title="application programming interface (应用程序接口)">API</abbr></a> 都提供了无障碍名称的 property。无障碍名称的值可以源自用户界面元素上可见的 (例如可见的文本或按钮) 或不可见的 (例如描述一个图标的文本替代品) property。请查阅<a>无障碍描述</a>。</p>
+      <p>无障碍名称 property 的一个简单的用法可能是通过一个 &quot;OK&quot; 按钮来说明。它的文本 &quot;OK&quot; 是无障碍名称。当按钮接收到焦点时，辅助技术可以把平台的角色描述和无障碍名称衔接起来。例如一个读屏软件可以念作 &quot;电钮 OK&quot; 或 &quot;OK 按钮&quot;。衔接的顺序和具体的角色描述 (例如 &quot;按钮&quot;、&quot;电钮&quot;、&quot;可点击的按钮&quot;) 由平台的<a class="termref" data-lt="accessibility api">无障碍 API</a> 或<a>辅助技术</a>来决定。</p>
     </dd>
 	<dt><dfn data-lt="accessible object|accessible objects">无障碍对象</dfn></dt>
     <dd>
-      <p>一个平台的<a>无障碍 <abbr title="application programming interface (应用程序接口)">API</abbr></a> 的<a>无障碍树</a>中的一个<a>结点</a>。无障碍对象暴露了若干个<a class="termref" data-lt="state">状态</a>、<a class="termref" data-lt="property">属性</a>和<a class="termref" data-lt="event">事件</a>为<a>辅助技术</a>所用。一般在标记语言、尤其是 WAI-ARIA 的上下文中 (例如 HTML 和 SVG)，标记<a class="termref" data-lt="element">元素</a>及其<a class="termref" data-lt="attribute">特性</a>会被展示为无障碍对象。</p>
+      <p>一个平台的<a>无障碍 <abbr title="application programming interface (应用程序接口)">API</abbr></a> 的<a>无障碍树</a>中的一个<a>结点</a>。无障碍对象暴露了若干个<a class="termref" data-lt="state">state</a>、<a class="termref" data-lt="property">property</a>和<a class="termref" data-lt="event">事件</a>为<a>辅助技术</a>所用。一般在标记语言、尤其是 WAI-ARIA 的上下文中 (例如 HTML 和 SVG)，标记<a class="termref" data-lt="element">元素</a>及其<a class="termref" data-lt="attribute">特性</a>会被展示为无障碍对象。</p>
     </dd>
     <dt><dfn>Activation behavior</dfn></dt>
     <dd>
@@ -50,7 +50,7 @@
     </dd>
     <dt><dfn data-lt="attribute|attributes">Attribute</dfn></dt>
     <dd>
-      <p>在这份规范里，attribute 和其在标记语言中的用法一样。Attribute 是添加在<a class="termref" href="#dfn-element">元素</a>上的结构化的特性，提供该元素展示的<a class="termref" href="#dfn-object">对象</a>的<a class="termref" href="#dfn-state">状态</a>和<a class="termref" href="#dfn-property">属性</a>。</p>
+      <p>在这份规范里，attribute 和其在标记语言中的用法一样。Attribute 是添加在<a class="termref" href="#dfn-element">元素</a>上的结构化的特性，提供该元素展示的<a class="termref" href="#dfn-object">对象</a>的 <a class="termref" href="#dfn-state">state</a> 和 <a class="termref" href="#dfn-property">property</a>。</p>
     </dd>
     <dt><dfn data-lt="class|classes">类</dfn></dt>
     <dd>
@@ -58,7 +58,7 @@
     </dd>
     <dt><dfn data-lt="deprecated|deprecate|deprecation">已废弃</dfn></dt>
     <dd>
-      <p>一个已废弃的<a class="termref" href="#dfn-role">角色</a>、<a class="termref" href="#dfn-state">状态</a>或<a class="termref" href="#dfn-property">属性</a>是已经因构造了更新的或情况发生变化而陈旧的，并在将来的版本中可能被移除的 <abbr title="Accessible Rich Internet Applications (无障碍的互联网富应用)">WAI-ARIA</abbr> 规范。<a class="termref" data-lt="user agent">用户代理</a>被鼓励继续支持被定位已废弃的项目，以获得更好的向后兼容性。更多信息参见一致性章节的<a href="#deprecated">已废弃的要求</a>。</p>
+      <p>一个已废弃的<a class="termref" href="#dfn-role">角色</a>、<a class="termref" href="#dfn-state">state</a> 或 <a class="termref" href="#dfn-property">property</a>是已经因构造了更新的或情况发生变化而陈旧的，并在将来的版本中可能被移除的 <abbr title="Accessible Rich Internet Applications (无障碍的互联网富应用)">WAI-ARIA</abbr> 规范。<a class="termref" data-lt="user agent">用户代理</a>被鼓励继续支持被定位已废弃的项目，以获得更好的向后兼容性。更多信息参见一致性章节的<a href="#deprecated">已废弃的要求</a>。</p>
     </dd>
     <dt><dfn>桌面聚焦事件</dfn></dt>
     <dd>
@@ -70,7 +70,7 @@
     </dd>
     <dt><dfn data-lt="event|events">事件</dfn></dt>
     <dd>
-      <p>一个程序化的信息，用于计算系统中沟通不相关的对象的状态的改变。通过抽象的事件来描述用户在网页上的输入是常见的，它描述了交互并提供文档对象状态改变的通知。在一些编程语言中，事件是通过消息提醒被认知的。</p>
+      <p>一个程序化的信息，用于计算系统中沟通不相关的对象的 state 的改变。通过抽象的事件来描述用户在网页上的输入是常见的，它描述了交互并提供文档对象 state 改变的通知。在一些编程语言中，事件是通过消息提醒被认知的。</p>
     </dd>
     <dt><dfn>暴露</dfn></dt>
     <dd>
@@ -98,15 +98,15 @@
     </dd>
     <dt><dfn data-lt="live region|live regions">活区域</dfn></dt>
     <dd>
-      <p>活区域是一个网页上的可察觉区域且通常会在用户聚焦到别的地方时通过别的事件产生变化。这些区域的变化不总是由用户交互引起。这类实践随着使用 Ajax 的增多而变得普遍。活区域的例子包括一个聊天记录、股票收报或一个随时更新的反应赛事统计的计分牌。因为这些不同的地方都可能在用户焦点区域之外发生改变，诸如屏幕阅读器等辅助技术不会注意到它们的存在或无法告知用户。WAI-ARIA 已经提供了一个属性集合来允许作者标识活区域并处理它们：aria-live、aria-relevant、aria-atomic 和 aria-busy。</p>
+      <p>活区域是一个网页上的可察觉区域且通常会在用户聚焦到别的地方时通过别的事件产生变化。这些区域的变化不总是由用户交互引起。这类实践随着使用 Ajax 的增多而变得普遍。活区域的例子包括一个聊天记录、股票收报或一个随时更新的反应赛事统计的计分牌。因为这些不同的地方都可能在用户焦点区域之外发生改变，诸如屏幕阅读器等辅助技术不会注意到它们的存在或无法告知用户。WAI-ARIA 已经提供了一个 property 集合来允许作者标识活区域并处理它们：aria-live、aria-relevant、aria-atomic 和 aria-busy。</p>
     </dd>
     <dt><dfn>主要内容元素</dfn></dt>
     <dd>
       <p>一个实现宿主语言的主要内容元素，例如 HTML 中的 <code>body</code> 元素。</p>
     </dd>
-    <dt><dfn data-lt="managed state|managed states">被管理的状态</dfn></dt>
+    <dt><dfn data-lt="managed state|managed states">被管理的 state</dfn></dt>
     <dd>
-      <p>被用户代理控制的<a>无障碍 API</a> <a>状态</a>，例如焦点和选择。它们会和被作者控制的&quot;不被管理的状态&quot;放在一起考虑。尽管如此，作者可以覆写一些被管理的状态，例如 aria-posinset 和 aria-setsize。很多被管理的状态有相应的例如 :focus 的 CSS 伪类和例如 ::selection 的 CSS 伪元素，它们同样会被用户代理更新。</p>
+      <p>被用户代理控制的<a>无障碍 API</a> 的 <a>state</a>，例如焦点和选择。它们会和被作者控制的&quot;不被管理的 state&quot;放在一起考虑。尽管如此，作者可以覆写一些被管理的 state，例如 aria-posinset 和 aria-setsize。很多被管理的 state 有相应的例如 :focus 的 CSS 伪类和例如 ::selection 的 CSS 伪元素，它们同样会被用户代理更新。</p>
     </dd>
     <dt><dfn>内梅斯布莱叶</dfn></dt>
     <dd>
@@ -147,27 +147,27 @@
     </dd>
     <dt><dfn data-lt="property|properties">Property</dfn></dt>
     <dd>
-      <p><a class="termref" data-lt="attribute">Attributes</a> that are essential to the nature of a given <a>object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, <pref>aria-multiline</pref>) are less likely to change than <a class="termref" href="#dfn-state">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as <pref>aria-activedescendant</pref>, <pref>aria-valuenow</pref>, and <pref>aria-valuetext</pref> are expected to change often. See <a href="http://www.w3.org/TR/wai-aria/states_and_properties#statevsprop">clarification of states versus properties</a>.</p>
+      <p>一个给定<a>对象</a>所必需的 <a class="termref" data-lt="attribute">attribute</a>，或代表一个和对象相关联的数据值。一个 property 的改变可能会现住地影响一个对象的意义或展示。确定的 property (例如 <pref>aria-multiline</pref>) 比 <a class="termref" href="#dfn-state">state</a> 更稳定，更不会发生改变，但是注意变更的频度并不是一条规则。一些 property，诸如 <pref>aria-activedescendant</pref>、<pref>aria-valuenow</pref> 和 <pref>aria-valuetext</pref> 也是经常改变的。查阅<a href="http://www.w3.org/TR/wai-aria/states_and_properties#statevsprop">对 state 和 property 的澄清</a>了解更多。</p>
     </dd>
-    <dt><dfn data-lt="relationship|relationships">Relationship</dfn></dt>
+    <dt><dfn data-lt="relationship|relationships">联系</dfn></dt>
     <dd>
-      <p>A connection between two distinct things. Relationships may be of various types to indicate which <a>object</a> labels another, controls another, etc.</p>
+      <p>两个不同事物之间的连接。联系表示方式的可以是多种类型的，例如一个<a>对象</a>标记了或控制了另一个对象等。</p>
     </dd>
-    <dt><dfn data-lt="role|roles">Role</dfn></dt>
+    <dt><dfn data-lt="role|roles">角色</dfn></dt>
     <dd>
-      <p>Main indicator of type. <!-- (removing, vague) The object's role is the class of <a class="termref" data-lt="object">objects</a> of which it is a member. --> This <a class="termref" data-lt="semantics">semantic</a> association allows tools to present and support interaction with the object in a manner that is consistent with user expectations about other objects of that type.</p>
+      <p>主要的标识类型。这个<a class="termref" data-lt="semantics">语义</a>关系允许工具展示并支持和对象的交互方式，以符合用户对同类对象的预期。</p>
     </dd>
-    <dt><dfn>Root <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> node</dfn></dt>
+    <dt><dfn>根 <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> 结点</dfn></dt>
     <dd>
-      <p> The primary element containing non-metadata content. In many languages, this is  the document element but in <abbr title="Hypertext Markup Language">HTML</abbr>, it is the <code>&lt;body&gt;</code>.</p>
+      <p>包含了非元数据的内容的主要元素。在许多语言中，这就是文档元素，但是在 <abbr title="Hypertext Markup Language (超文本标记语言)">HTML</abbr> 中是 <code>&lt;body&gt;</code>。</p>
     </dd>
-    <dt><dfn data-lt="semantics|semantic|semantically">Semantics</dfn></dt>
+    <dt><dfn data-lt="semantics|semantic|semantically">语义</dfn></dt>
     <dd>
-      <p>The meaning of something as understood by a human, defined in a way that computers can process a representation of an <a>object</a>, such as <a class="termref" data-lt="element">elements</a> and <a class="termref" data-lt="attribute">attributes</a>, and reliably represent the object in a way that various humans will achieve a mutually consistent understanding of the object.</p>
+      <p>一些对人类来说可以理解的意思，以计算机可以处理的<a>对象</a>展示的方式被定义，例如<a class="termref" data-lt="element">元素</a>和 <a class="termref" data-lt="attribute">attribute</a>，并以各类人都可以相互理解的对象的方式可靠地展示对象。</p>
     </dd>
     <dt><dfn data-lt="state|states">State</dfn></dt>
     <dd>
-      <p>A state is a dynamic <a class="termref" href="#dfn-property">property</a> expressing characteristics of an <a>object</a> that may change in response to user action or automated processes. States do not affect the essential nature of the object, but represent data associated with the object or user interaction possibilities. See <a href="http://www.w3.org/TR/wai-aria/states_and_properties#statevsprop">clarification of states versus properties</a>.</p>
+      <p>一个 state 是表示一个<a>对象</a>特征的动态的 <a class="termref" href="#dfn-property">property</a>，可能会由于用户交互或自动化流程而改变。State 不会影响对象的必然本质，但是会展示关系到对象或用户交互可能性的数据。查阅<a href="http://www.w3.org/TR/wai-aria/states_and_properties#statevsprop">对 state 和 property 的澄清</a>了解更多。</p>
     </dd>
     <dt><dfn>Sub-document</dfn></dt>
     <dd>
