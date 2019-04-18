@@ -125,11 +125,11 @@
       <p>在用户界面的上下文中，是一个具有可感知用户体验，在标记语言中以一个或多个<a class="termref" data-lt="element">元素</a>呈现，且被<a class="termref" data-lt="user agent">用户代理</a>渲染的项目。</p>
       <p>在编程的上下文中，是一个或多个<a class="termref" data-lt="class">类</a>和定义类似对象一般化特征的接口的实例化。一个<a>无障碍 <abbr title="Application Programming Interfaces (应用程序接口)">API</abbr></a> 可能体现了一个或多个 DOM 对象。<a class="termref" data-lt="accessibility api">无障碍 API</a> 定义了区别于 DOM 接口的接口。</p>
     </dd>  
-    <dt><dfn>本体论</dfn></dt>
+    <dt><dfn>本体</dfn></dt>
     <dd>
       <p>一段<a class="termref" data-lt="class">类</a>的特征的描述以及它们之间如何相关联。</p>
     </dd>
-    <dt><dfn>可操作</dfn></dt>
+    <dt><dfn>可操作性</dfn></dt>
     <dd>
       <p>可以以用户可以控制的方式使用。这份文档中的引用关联了 <cite><a href="https://www.w3.org/Translations/WCAG20-zh/#operable"><abbr title="Web Content Accessibility Guidelines (网页内容无障碍指南)">WCAG</abbr> 2.0 原则2：可操作性-内容必须可操作</a></cite> [[WCAG20]]。更多可查阅<a>键盘无障碍</a>。</p>
     </dd>
@@ -169,40 +169,40 @@
     <dd>
       <p>一个 state 是表示一个<a>对象</a>特征的动态的 <a class="termref" href="#dfn-property">property</a>，可能会由于用户交互或自动化流程而改变。State 不会影响对象的必然本质，但是会展示关系到对象或用户交互可能性的数据。查阅<a href="http://www.w3.org/TR/wai-aria/states_and_properties#statevsprop">对 state 和 property 的澄清</a>了解更多。</p>
     </dd>
-    <dt><dfn>Sub-document</dfn></dt>
+    <dt><dfn>子文档</dfn></dt>
     <dd>
-      <p>Any document created from a <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code> or similar mechanism. A sub-document may contain a document, an application or any widget such as a calendar pulled in from another server. In the <a>accessibility tree</a> there are two <a class="termref" data-lt="accessible object">accessible objects</a> for this situation&mdash;one represents the <code>&lt;frame&gt;</code>/<code>&lt;iframe&gt;</code> element in the parent document, which parents a single <a>accessible object</a> child representing the spawned document contents.</p>
+      <p>任何通过 <code>&lt;frame&gt;</code>、<code>&lt;iframe&gt;</code> 或类似机制创建出来的文档。一个子文档可能包含一个文档、一个应用或任何挂件，诸如从另一个服务器拉来的日历。在<a>无障碍树</a>中，有两种这样情况的<a class="termref" data-lt="accessible object">无障碍对象</a>——一个代表了父级文档中的 <code>&lt;frame&gt;</code>/<code>&lt;iframe&gt;</code> 元素，该父级文档是一个<a>无障碍对象</a>子级内容，代表了衍生出来的文档内容。</p>
     </dd>
-    <dt><dfn>Target Element</dfn></dt>
+    <dt><dfn>目标元素</dfn></dt>
     <dd>
-      <p>An element specified in a <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> relation. For example, in <code> &lt;div aria-controls=”elem1”&gt;</code>, where <code>“elem1”</code> is the ID for the target element.</p>
+      <p>一个在 <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> 关系描述中被指定的元素。例如 <code>&lt;div aria-controls="elem1"&gt;</code> 中的 <code>"elem1"</code> 是这个目标元素的 ID。</p>
     </dd>
-    <dt><dfn>Taxonomy</dfn></dt>
+    <dt><dfn>分类系统</dfn></dt>
     <dd>
-      <p>A hierarchical definition of how the characteristics of various <a class="termref" data-lt="class">classes</a> relate to each other, in which classes inherit the properties of superclasses in the hierarchy. A taxonomy can comprise part of the formal definition of an <a>ontology</a>.</p>
+      <p>一个对于多种<a class="termref" data-lt="class">类</a>之间关系的分级的定义。分类系统中的类的属性继承自它的超类。一个分类系统可以构成一部分<a>本体</a>的正式定义。</p>
     </dd>
-    <dt><dfn>Text node</dfn></dt>
+    <dt><dfn>文本结点</dfn></dt>
     <dd>
-      <p>Type of <abbr title="Document Object Model">DOM</abbr> <a class="termref" data-lt="node">node</a> that represents the textual content of an <a class="termref">attribute</a> or an <a class="termref">element</a>. A Text node has no child nodes.  </p>
+      <p><abbr title="Document Object Model (文档对象模型)">DOM</abbr> <a class="termref" data-lt="node">结点</a>的一种，代表一个 <a class="termref">attribute</a> 或<a class="termref">元素</a>的文本内容。文本结点没有任何子结点。</p>
     </dd>
-    <dt><dfn>Tooltip attribute</dfn></dt>
+    <dt><dfn>工具提示 attribute</dfn></dt>
     <dd>
-      <p>Any host language attribute that would result in a user agent generating a tooltip such as in response to a mouse hover in desktop user agents.</p>
+      <p>会让一个用户代理生成工具提示的任何宿主语言的 attribute，例如桌面端用户代理中对鼠标悬停的响应。</p>
     </dd>
-    <dt><dfn>Understandable</dfn></dt>
+    <dt><dfn>可理解性</dfn></dt>
     <dd>
-      <p>Presentable to users in ways they can construct an appropriate meaning. References in this document relate to <cite><a href="http://www.w3.org/TR/WCAG20/#understandable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0 Principle 3: Information and the operation of user interface must be understandable</a></cite> [[WCAG20]].</p>
+      <p>可以展示给用户并使其产生结构化含义。这份文档中的引用关联了 <cite><a href="https://www.w3.org/Translations/WCAG20-zh/#understandable"><abbr title="Web Content Accessibility Guidelines (网页内容无障碍指南)">WCAG</abbr> 2.0 原则3：信息和用户界面操作必须是可理解的</a></cite> [[WCAG20]]。</p>
     </dd>
-    <dt><dfn data-lt="user agent|user agents">User Agent</dfn></dt>
+    <dt><dfn data-lt="user agent|user agents">用户代理</dfn></dt>
     <dd>
-      <p>Any software that retrieves, renders and facilitates end user interaction with Web content. This definition may differ from that used in other documents.</p>
+      <p>任何获取、渲染、促使最终用户和 web 内容交互的软件。这个定义可能和其它文档中的定义有所不同。</p>
     </dd>
-    <dt><dfn>Valid IDREF</dfn></dt>
+    <dt><dfn>有效的 IDREF</dfn></dt>
     <dd>
-      <p>A reference to a target element in the same document that has a matching ID</p>
+      <p>一个匹配同一个文档中目标元素 ID 的引用。</p>
     </dd>
-    <dt><dfn data-lt="widget|widgets">Widget</dfn></dt>
+    <dt><dfn data-lt="widget|widgets">挂件</dfn></dt>
     <dd>
-      <p>Discrete user interface <a class="termref" href="#dfn-object">object</a> with which the user can interact. Widgets range from simple objects that have one value or operation (e.g., check boxes and menu items), to complex objects that contain many managed sub-objects (e.g., trees and grids).</p>
+      <p>用户可交互的分离的用户界面<a class="termref" href="#dfn-object">对象</a>。挂件既包含了只有一个值或操作的简单的对象 (如复选框或菜单项)，也包含了管理很多子对象的复杂对象 (例如树或网格)。</p>
     </dd>
   </dl>
