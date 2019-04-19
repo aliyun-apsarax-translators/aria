@@ -1,209 +1,208 @@
-<p>While some terms are defined in place, the following definitions are used throughout this document. </p>
+<p>在一些术语已经在所在位置被定义的同时，下列定义会适用于整份文档。</p>
 <dl class="termlist">
-    <dt><dfn data-lt="accessibility api|accessibility apis">Accessibility <abbr title="Application Programming Interface">API</abbr></dfn></dt>
+    <dt><dfn data-lt="accessibility api|accessibility apis">无障碍 <abbr title="Application Programming Interface (应用程序接口)">API</abbr></dfn></dt>
     <dd>
-      <p>Operating systems and other platforms provide a set of interfaces that expose information about <a class="termref" data-lt="object">objects</a> and <a class="termref" data-lt="event">events</a> to <a>assistive technologies</a>. Assistive technologies use these interfaces to get information about and interact with those <a class="termref" data-lt="widget">widgets</a>. Examples of accessibility APIs are <a href="https://msdn.microsoft.com/en-us/library/ms697270(VS.85).aspx">Microsoft Active Accessibility</a> [[MSAA]], <a href="https://msdn.microsoft.com/en-us/library/ee684013%28VS.85%29.aspx">Microsoft User Interface Automation</a> [[UI-AUTOMATION]], <abbr title="Microsoft Active Accessibility">MSAA</abbr> with <cite><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898(v=vs.85).aspx"><abbr title="User Interface Automation">UIA</abbr> Express</a></cite> [[UIA-EXPRESS]], the
-      	<a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSAccessibility_Protocol/index.html">Mac <abbr title="OS Ten">OS X</abbr> Accessibility Protocol</a> [[AXAPI]], the <cite><a href="https://developer.gnome.org/atk/unstable/">Linux/Unix Accessibility Toolkit</a></cite> [[ATK]] and <cite><a href="https://developer.gnome.org/libatspi/stable/">Assistive Technology Service Provider Interface</a></cite> [[AT-SPI]], and <a href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/start">IAccessible2</a> [[IAccessible2]].</p>
+      <p>操作系统和其它平台提供了一套给<a>辅助技术</a>暴露<a class="termref" data-lt="object">对象</a>和<a class="termref" data-lt="event">事件</a>信息的接口。辅助技术使用这些接口来获取相关信息并和那些<a class="termref" data-lt="widget">挂件</a>进行交互。无障碍 API 的例子有 <a href="https://msdn.microsoft.com/en-us/library/ms697270(VS.85).aspx">微软主动式无障碍</a> [[MSAA]]、<a href="https://msdn.microsoft.com/en-us/library/ee684013%28VS.85%29.aspx">微软用户接口自动化</a> [[UI-AUTOMATION]]、<abbr title="微软主动式无障碍">MSAA</abbr> 和 <cite><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898(v=vs.85).aspx"><abbr title="用户接口自动化">UIA</abbr> 直达</a></cite> [[UIA-EXPRESS]]、
+        <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSAccessibility_Protocol/index.html">Mac <abbr title="OS Ten">OS X</abbr> 无障碍协议</a> [[AXAPI]]、<cite><a href="https://developer.gnome.org/atk/unstable/">Linux/Unix 无障碍工具集</a></cite> [[ATK]] 和 <cite><a href="https://developer.gnome.org/libatspi/stable/">辅助技术服务提供者接口</a></cite> [[AT-SPI]] 以及 <a href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/start">IAccessible2</a> [[IAccessible2]]。</p>
     </dd>
-    <dt><dfn>Accessibility Subtree</dfn></dt>
+    <dt><dfn data-lt="accessibility subtree">无障碍子树</dfn></dt>
     <dd>
-      <p>An <a>accessible object</a> in the <a>accessibility tree</a> and its descendants in that tree. It does not include objects which have relationships other than parent-child in that tree. For example, it does not include objects linked via <pref>aria-flowto</pref> unless those objects are also descendants in the <a>accessibility tree</a>.</p>
+      <p><a>无障碍树</a>中的一个<a>无障碍对象</a>以及它在那棵树中的后代。它不包含那棵树中父-子关系之外的对象。例如不包含通过 <pref>aria-flowto</pref> 链接起来的那些对象，除非那些对象同时也是这棵<a>无障碍树</a>的后代。</p>
     </dd>
-    <dt><dfn>Accessibility Tree</dfn></dt>
+    <dt><dfn data-lt="accessibility tree">无障碍树</dfn></dt>
     <dd>
-      <p>Tree of <a class="termref" data-lt="accessible object">accessible objects</a> that represents the structure of the user interface (UI). Each node in the accessibility tree represents an element in the <abbr title="user interface">UI</abbr> as exposed through the <a>accessibility <abbr title="Application Programming Interface">API</abbr></a>; for example, a push button, a check box, or container.</p>
+      <p><a class="termref" data-lt="accessible object">无障碍对象</a>的树，表现了用户界面 (UI) 的结构。无障碍树里的每个结点都表现了一个 <abbr title="用户界面">UI</abbr> 中的元素，并通过<a>无障碍 <abbr title="Application Programming Interface (应用程序接口)">API</abbr></a> 暴露出来；例如一个按钮、一个复选框或容器。</p>
     </dd>
-    <dt><dfn>Accessible Description</dfn></dt>
+    <dt><dfn data-lt="accessible description">无障碍描述</dfn></dt>
     <dd>
-      <p>An accessible description provides additional information, related to an interface element, that complements the <a>accessible name</a>. The accessible description might or might not be visually perceivable. </p>
+      <p>一段提供了额外信息的无障碍描述，关联到一个界面上的元素，作为<a>无障碍名称</a>的补充。无障碍描述可以是视觉上可接收的，也可以不是。</p>
     </dd>
-	<dt><dfn data-lt="accessible name|accessible names">Accessible Name</dfn></dt>
+	<dt><dfn data-lt="accessible name|accessible names">无障碍名称</dfn></dt>
     <dd>
-      <p>The accessible name is the name of a user interface element. Each platform <a>accessibility <abbr title="application programming interface">API</abbr></a> provides the accessible name property. The value of the accessible name may be derived from a visible (e.g., the visible text on a button) or invisible (e.g., the text alternative that describes an icon) property of the user interface element.  See related <a>accessible description</a>.</p>
-      <p>A simple use for the accessible name property may be illustrated by an &quot;OK&quot; button. The text &quot;OK&quot; is the accessible name. When the button receives focus, assistive technologies may concatenate the platform's role description with the accessible name. For example, a screen reader may speak &quot;push-button OK&quot; or &quot;OK button&quot;. The order of concatenation and specifics of the role description (e.g., &quot;button&quot;, &quot;push-button&quot;, &quot;clickable button&quot;) are determined by platform <a class="termref" data-lt="accessibility api">accessibility API</a>s or <a>assistive technologies</a>.</p>
+      <p>无障碍名称是一个用户界面元素的名称。每个平台的<a>无障碍 <abbr title="application programming interface (应用程序接口)">API</abbr></a> 都提供了无障碍名称的 property。无障碍名称的值可以源自用户界面元素上可见的 (例如可见的文本或按钮) 或不可见的 (例如描述一个图标的文本替代品) property。请查阅<a>无障碍描述</a>。</p>
+      <p>无障碍名称 property 的一个简单的用法可能是通过一个 &quot;OK&quot; 按钮来说明。它的文本 &quot;OK&quot; 是无障碍名称。当按钮接收到焦点时，辅助技术可以把平台的角色描述和无障碍名称衔接起来。例如一个读屏软件可以念作 &quot;电钮 OK&quot; 或 &quot;OK 按钮&quot;。衔接的顺序和具体的角色描述 (例如 &quot;按钮&quot;、&quot;电钮&quot;、&quot;可点击的按钮&quot;) 由平台的<a class="termref" data-lt="accessibility api">无障碍 API</a> 或<a>辅助技术</a>来决定。</p>
     </dd>
-	<dt><dfn data-lt="accessible object|accessible objects">Accessible object</dfn></dt>
+	<dt><dfn data-lt="accessible object|accessible objects">无障碍对象</dfn></dt>
     <dd>
-      <p>A <a>node</a> in the <a>accessibility tree</a> of a platform <a>accessibility <abbr title="application programming interface">API</abbr></a>. Accessible objects expose various <a class="termref" data-lt="state">states</a>, <a class="termref" data-lt="property">properties</a>, and <a class="termref" data-lt="event">events</a> for use by <a>assistive technologies</a>.  In the context of markup languages (e.g., HTML and SVG) in general, and of WAI-ARIA in particular, markup <a class="termref" data-lt="element">elements</a> and their <a class="termref" data-lt="attribute">attributes</a> are represented as accessible objects.  </p>
+      <p>一个平台的<a>无障碍 <abbr title="application programming interface (应用程序接口)">API</abbr></a> 的<a>无障碍树</a>中的一个<a>结点</a>。无障碍对象暴露了若干个<a class="termref" data-lt="state">state</a>、<a class="termref" data-lt="property">property</a>和<a class="termref" data-lt="event">事件</a>为<a>辅助技术</a>所用。一般在标记语言、尤其是 WAI-ARIA 的上下文中 (例如 HTML 和 SVG)，标记<a class="termref" data-lt="element">元素</a>及其<a class="termref" data-lt="attribute">特性</a>会被展示为无障碍对象。</p>
     </dd>
-    <dt><dfn>Activation behavior</dfn></dt>
+    <dt><dfn data-lt="activation behavior">Activation behavior</dfn></dt>
     <dd>
       <p>The action taken when an <a>event</a>, typically initiated by users through an input device, causes an element to fulfill a defined role. The role may be defined for that element by the host language, or by author-defined variables, or both. The role for any given element may be a generic action, or may be unique to that element. For example, the activation behavior of an <abbr title="Hypertext Markup Language">HTML</abbr> or <abbr title="Scalable Vector Graphics">SVG</abbr> <code>&lt;a&gt;</code> element shall be to cause the user agent to traverse the link specified in the <code>href</code> attribute, with the further optional parameter of specifying the browsing context for the traversal (such as the current window or tab, a named window, or a new window); the activation behavior of an <abbr title="Hypertext Markup Language">HTML</abbr> <code>&lt;input&gt;</code> element with the <code>type</code> attribute value <code>submit</code> shall be to send the values of the form elements to an author-defined <abbr title="Internationalized Resource Identifiers">IRI</abbr> by the author-defined <abbr title="Hypertext Transfer Protocol">HTTP</abbr> method.</p>
     </dd>
-    <dt><dfn data-lt="assistive technology">Assistive Technologies</dfn></dt>
-    <dd><p>Hardware and/or software that:</p>
-			<ul>
-				<li>relies on services provided by a <a>user agent</a> to retrieve and render Web content </li>
-				<li>works with a user agent or web content itself through the use of APIs, and</li>
-				<li>provides services beyond those offered by the user agent to facilitate user interaction with web content by people with disabilities</li>
-			</ul>
-      <p>This definition may differ from that used in other documents.</p>
-    <p>Examples of assistive technologies that are important in the context
-      of this document include the following:</p>
+    <dt><dfn data-lt="assistive technology">辅助技术</dfn></dt>
+    <dd><p>硬件或软件满足：</p>
+      <ul>
+        <li>依赖一个<a>用户代理</a>提供的服务来获取和渲染 web 内容</li>
+        <li>通过使用 API 和一个用户代理或 web 内容本身工作在一起，以及</li>
+        <li>超越用户代理提供的东西来提供服务，促进有障碍的用户和 web 内容互动</li>
+      </ul>
+      <p>这个定义可能不同于其它文档。</p>
+    <p>在文档上下文中非常重要的辅助技术的例子有：</p>
     <ul>
-      <li>screen magnifiers, which are used to enlarge and improve the visual readability of rendered text and images;</li>
-      <li>screen readers, which are most-often used to convey information through synthesized speech or a refreshable Braille display;</li>
-      <li>text-to-speech software, which is used to convert text into synthetic speech;</li>
-      <li>speech recognition software, which is used to allow spoken control and dictation;</li>
-      <li>alternate input technologies (including head pointers, on-screen keyboards, single switches, and sip/puff devices), which are used to simulate the keyboard;</li>
-      <li>alternate pointing devices, which are used to simulate mouse pointing and clicking.</li>
+      <li>屏幕放大器，用来放大并改善被渲染文本和图片的视觉可读性；</li>
+      <li>屏幕阅读器，经常用来把信息转换成为合成语音或可刷新的盲文展示；</li>
+      <li>文本转语音软件，用来把文本转换成为合成语音；</li>
+      <li>语音识别软件，允许语音控制和叙述；</li>
+      <li>替代输入的技术 (包括头动指针、屏幕上的虚拟键盘、单项开关和呼气/吸气控制设备)，用来模拟键盘；</li>
+      <li>替代指针的设备，用来模拟鼠标和点击。</li>
     </ul>
     </dd>
     <dt><dfn data-lt="attribute|attributes">Attribute</dfn></dt>
     <dd>
-      <p>In this specification, attribute is used as it is in markup languages. Attributes are structural features added to <a class="termref" href="#dfn-element">elements</a> to provide information about the <a class="termref" href="#dfn-state">states</a> and <a class="termref" href="#dfn-property">properties</a> of the <a class="termref" href="#dfn-object">object</a> represented by the element.</p>
+      <p>在这份规范里，attribute 和其在标记语言中的用法一样。Attribute 是添加在<a class="termref" href="#dfn-element">元素</a>上的结构化的特性，提供该元素展示的<a class="termref" href="#dfn-object">对象</a>的 <a class="termref" href="#dfn-state">state</a> 和 <a class="termref" href="#dfn-property">property</a>。</p>
     </dd>
-    <dt><dfn data-lt="class|classes">Class</dfn></dt>
+    <dt><dfn data-lt="class|classes">类</dfn></dt>
     <dd>
-      <p>A set of instance <a class="termref" href="#dfn-object">objects</a> that share similar characteristics.</p>
+      <p>一组共享相同特征的实例<a class="termref" href="#dfn-object">对象</a>。</p>
     </dd>
-    <dt><dfn data-lt="deprecated|deprecate|deprecation">Deprecated</dfn></dt>
+    <dt><dfn data-lt="deprecated|deprecate|deprecation">已废弃</dfn></dt>
     <dd>
-      <p>A deprecated <a class="termref" href="#dfn-role">role</a>, <a class="termref" href="#dfn-state">state</a>, or <a class="termref" href="#dfn-property">property</a> is one which has been outdated by newer constructs or changed circumstances, and which may be removed in future versions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification. <a class="termref" data-lt="user agent">User agents</a> are encouraged to continue to support items identified as deprecated for backward compatibility. For more information, see <a href="#deprecated">Deprecated Requirements</a> in the Conformance section.</p>
+      <p>一个已废弃的<a class="termref" href="#dfn-role">角色</a>、<a class="termref" href="#dfn-state">state</a> 或 <a class="termref" href="#dfn-property">property</a>是已经因构造了更新的或情况发生变化而陈旧的，并在将来的版本中可能被移除的 <abbr title="Accessible Rich Internet Applications (无障碍的互联网富应用)">WAI-ARIA</abbr> 规范。<a class="termref" data-lt="user agent">用户代理</a>被鼓励继续支持被定位已废弃的项目，以获得更好的向后兼容性。更多信息参见一致性章节的<a href="#deprecated">已废弃的要求</a>。</p>
     </dd>
-    <dt><dfn>Desktop focus event</dfn></dt>
+    <dt><dfn data-lt="desktop focus event">桌面聚焦事件</dfn></dt>
     <dd>
-      <p>Event from/to the host operating system via the accessibility <abbr title="application programming interface">API</abbr>, notifying of a change of input focus.</p>
+      <p>通过无障碍 <abbr title="application programming interface">API</abbr> 来/到宿主操作系统的事件，提示输入焦点的改变。</p>
     </dd>
-    <dt><dfn data-lt="element|elements|element's">Element</dfn></dt>
+    <dt><dfn data-lt="element|elements|element's">元素</dfn></dt>
     <dd>
-      <p>In this specification, element is used as it is in markup languages. Elements are the structural elements in markup language that contains the data profile for <a class="termref" data-lt="object">objects</a>.</p>
+      <p>在这份规范里，元素和其在标记语言中的用法一样。元素是为<a class="termref" data-lt="object">对象</a>包含数据情况的结构化的标记语言元素。</p>
     </dd>
-    <dt><dfn data-lt="event|events">Event</dfn></dt>
+    <dt><dfn data-lt="event|events">事件</dfn></dt>
     <dd>
-      <p>A programmatic message used to communicate discrete changes in the <a>state</a> of an <a>object</a> to other objects in a computational system. User input to a web page is commonly mediated through abstract events that describe the interaction and can provide notice of changes to the state of a document object. In some programming languages, events are more commonly known as notifications.</p>
+      <p>一个程序化的信息，用于计算系统中沟通不相关的对象的 state 的改变。通过抽象的事件来描述用户在网页上的输入是常见的，它描述了交互并提供文档对象 state 改变的通知。在一些编程语言中，事件是通过消息提醒被认知的。</p>
     </dd>
-    <dt><dfn>Expose</dfn></dt>
+    <dt><dfn data-lt="expose">暴露</dfn></dt>
     <dd>
-      <p>Translated to platform-specific <a class="termref" data-lt="accessibility api">accessibility APIs</a> as defined in the <cite><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> User Agent Implementation Guide.</cite> [[WAI-ARIA-IMPLEMENTATION]]</p>
+      <p>根据<cite><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 用户代理实现指南</cite>的定义翻译到平台相关的<a class="termref" data-lt="accessibility api">无障碍 APIs</a>。[[WAI-ARIA-IMPLEMENTATION]]</p>
     </dd>
-	<dt><dfn data-lt="graphical document|graphical documents">Graphical Document</dfn></dt>
+	<dt><dfn data-lt="graphical document|graphical documents">图形化文档</dfn></dt>
     <dd>
-      <p>A document containing graphic representations with user-navigable parts. Charts, maps, diagrams, blueprints, and dashboards are examples of graphical documents. A graphical document is composed using any combination of symbols, images, text, and graphic primitives (shapes such as circles, points, lines, paths, rectangles, etc).</p>
+      <p>一个包含了图形化展示的用户可导航的文档。图表、地图、示意图、蓝图和仪表盘都是图形化文档的例子。一个图形化的文档会使用任何符号、图片、文字和原始的图形 (如圆、点、线、路径、矩形等图形) 来组合而成。</p>
     </dd>
-    <dt><dfn>Hidden</dfn></dt>
+    <dt><dfn data-lt="hidden">隐藏</dfn></dt>
     <dd>
-        <p>Indicates that the <a>element</a> is not visible, <a>perceivable</a>, or interactive to <em>any</em> user. An element is considered <em>hidden</em> if it or any one of its ancestor elements is not rendered or is explicitly hidden.</p>
+        <p>表示这个<a>元素</a>对<em>任何</em>用户来说都是不可见的、不<a>可察觉的</a>、也不可交互的。一个<em>隐藏</em>元素是指它或它的上层祖先元素没有被渲染或明确被隐藏。</p>
     </dd>
-    <dt><dfn data-lt="informative|non-normative">Informative</dfn></dt>
+    <dt><dfn data-lt="informative|non-normative">提供有用信息的</dfn></dt>
     <dd>
-      <p>Content provided for information purposes and not required for conformance. Content required for conformance is referred to as <a>normative</a>.</p>
+      <p>提供信息且不要求一致性的内容。要求一致性的内容会被认为是<a>规范的</a>。</p>
     </dd>
-    <dt><dfn>Keyboard Accessible</dfn></dt>
+    <dt><dfn data-lt="keyboard accessible">键盘无障碍</dfn></dt>
     <dd>
-      <p>Accessible to the user using a keyboard or <a>assistive technologies</a> that mimic keyboard input, such as a sip and puff tube. References in this document relate to <cite><a href="http://www.w3.org/TR/WCAG20/#keyboard-operation"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0 Guideline 2.1: Make all functionality available from a keyboard</a></cite> [[WCAG20]].</p>
+      <p>对使用键盘或诸如可呼气/吸气管道的模拟键盘输入的<a>辅助技术</a>的用户无障碍。这份文档中提到的内容关联到了<cite><a href="https://www.w3.org/Translations/WCAG21-zh/#keyboard-accessible"><abbr title="Web Content Accessibility Guidelines (网页内容无障碍指南)">WCAG</abbr> 2.0 指南 2.1: 使所有功能都能通过键盘来操作</a></cite> [[WCAG20]]。</p>
     </dd>
-    <dt><dfn data-lt="landmark|landmarks">Landmark</dfn></dt>
+    <dt><dfn data-lt="landmark|landmarks">地标</dfn></dt>
     <dd>
-      <p>A type of region on a page to which the user may want quick access. Content in such a region is different from that of other regions on the page and relevant to a specific user purpose, such as navigating, searching, perusing the primary content, etc.</p>
+      <p>网页上用户可以快速访问到的一类区域。网页里这样的不同区域里的内容是不同的，同时和具体的用户目的相关联，诸如导航、搜索、详读主题内容等。</p>
     </dd>
-    <dt><dfn data-lt="live region|live regions">Live Region</dfn></dt>
+    <dt><dfn data-lt="live region|live regions">活区域</dfn></dt>
     <dd>
-      <p>Live regions are perceivable regions of a web page that are typically updated as a result of an external event when user focus may be elsewhere. These regions are not always updated as a result of a user interaction. This practice has become commonplace with the growing use of Ajax. Examples of live regions include a chat log, stock ticker, or a sport scoring section that updates periodically to reflect game statistics. Since these asynchronous areas are expected to update outside the user's area of focus, assistive technologies such as screen readers have either been unaware of their existence or unable to process them for the user. WAI-ARIA has provided a collection of properties that allow the author to identify these live regions and process them: aria-live, aria-relevant, aria-atomic, and aria-busy.</p>
+      <p>活区域是一个网页上的可察觉区域且通常会在用户聚焦到别的地方时通过别的事件产生变化。这些区域的变化不总是由用户交互引起。这类实践随着使用 Ajax 的增多而变得普遍。活区域的例子包括一个聊天记录、股票收报或一个随时更新的反应赛事统计的计分牌。因为这些不同的地方都可能在用户焦点区域之外发生改变，诸如屏幕阅读器等辅助技术不会注意到它们的存在或无法告知用户。WAI-ARIA 已经提供了一个 property 集合来允许作者标识活区域并处理它们：aria-live、aria-relevant、aria-atomic 和 aria-busy。</p>
     </dd>
-    <dt><dfn>Primary Content Element</dfn></dt>
+    <dt><dfn data-lt="primary content element">主要内容元素</dfn></dt>
     <dd>
-      <p>An implementing host language's primary content element, such as the <code>body</code> element in HTML.</p>
+      <p>一个实现宿主语言的主要内容元素，例如 HTML 中的 <code>body</code> 元素。</p>
     </dd>
-    <dt><dfn data-lt="managed state|managed states">Managed State</dfn></dt>
+    <dt><dfn data-lt="managed state|managed states">被管理的 state</dfn></dt>
     <dd>
-      <p><a>Accessibility API</a> <a>state</a> that is controlled by the user agent, such as focus and selection. These are contrasted with &quot;unmanaged states&quot; that are typically controlled by the author. Nevertheless, authors can override some managed states, such as aria-posinset and aria-setsize. Many managed states have corresponding CSS pseudo-classes, such as :focus, and pseudo-elements, such as ::selection, that are also updated by the user agent.</p>
+      <p>被用户代理控制的<a>无障碍 API</a> 的 <a>state</a>，例如焦点和选择。它们会和被作者控制的&quot;不被管理的 state&quot;放在一起考虑。尽管如此，作者可以覆写一些被管理的 state，例如 aria-posinset 和 aria-setsize。很多被管理的 state 有相应的例如 :focus 的 CSS 伪类和例如 ::selection 的 CSS 伪元素，它们同样会被用户代理更新。</p>
     </dd>
-    <dt><dfn>Nemeth Braille</dfn></dt>
+    <dt><dfn data-lt="nemeth braille">内梅斯布莱叶</dfn></dt>
     <dd>
-        <p>The Nemeth Braille Code for Mathematics is a braille code for encoding mathematical and scientific notation. See <cite><a href="https://en.wikipedia.org/wiki/Nemeth_Braille">Nemeth Braille on Wikipedia</a>.</cite></p>
+        <p>内梅斯布莱叶数学码 (Nemeth Braille Code for Mathematics) 是一种为数学和科学符号编码的盲文。查阅<cite><a href="https://en.wikipedia.org/wiki/Nemeth_Braille">维基百科上的 Nemeth Braille</a>了解更多。</cite></p>
     </dd>
-    <dt><dfn>Node</dfn></dt>
+    <dt><dfn data-lt="node">结点</dfn></dt>
     <dd>
-      <p>Basic type of <a class="termref">object</a> in the <abbr title="Document Object Model">DOM</abbr> tree or <a class="termref">accessibility tree</a>. <abbr title="Document Object Model">DOM</abbr> nodes are further specified as <a class="termref">Element</a> or <a class="termref" data-lt="Text node">Text nodes</a>, among other types. The nodes of an <a class="termref">accessibility tree</a> are <a class="termref" data-lt="accessible object">accessible objects</a>.  </p>
+      <p><abbr title="Document Object Model (文档对象模型)">DOM</abbr> 树或<a class="termref">无障碍树</a>中的<a class="termref">对象</a>的基本类型。由 <abbr title="Document Object Model">DOM</abbr> 结点再指定，就包括了<a class="termref">元素</a>或<a class="termref" data-lt="Text node">文本结点</a>。一个<a class="termref">无障碍树</a>上的结点是<a class="termref" data-lt="accessible object">无障碍对象</a>。</p>
     </dd>
-    <dt><dfn>Normative</dfn></dt>
+    <dt><dfn data-lt="normative">规范的</dfn></dt>
     <dd>
-      <p>Required for conformance. By contrast, content identified as <a>informative</a> or &quot;non-normative&quot; is not required for conformance.</p>
+      <p>有一致性的要求。相对来说，被认为<a>提供有用信息的</a>或“不规范的”内容是不要求一致性的。</p>
     </dd>
-    <dt><dfn data-lt="object|objects">Object</dfn></dt>
+    <dt><dfn data-lt="object|objects">对象</dfn></dt>
     <dd>
-      <p>In the context of user interfaces,  an item in the   perceptual user experience, represented in markup languages by one or   more <a class="termref" data-lt="element">elements</a>, and rendered by <a class="termref" data-lt="user agent">user agents</a>.</p>
-    In the context of programming, the instantiation of one or more <a class="termref" data-lt="class">classes</a> and interfaces which define the general characteristics of similar objects. An object in an <a>accessibility <abbr title="Application Programming Interfaces">API</abbr></a> may represent one or more DOM objects. <a class="termref" data-lt="accessibility api">Accessibility APIs</a> have defined interfaces that are distinct from DOM interfaces.</dd>
-  
-    <dt><dfn>Ontology</dfn></dt>
+      <p>在用户界面的上下文中，是一个具有可感知用户体验，在标记语言中以一个或多个<a class="termref" data-lt="element">元素</a>呈现，且被<a class="termref" data-lt="user agent">用户代理</a>渲染的项目。</p>
+      <p>在编程的上下文中，是一个或多个<a class="termref" data-lt="class">类</a>和定义类似对象一般化特征的接口的实例化。一个<a>无障碍 <abbr title="Application Programming Interfaces (应用程序接口)">API</abbr></a> 可能体现了一个或多个 DOM 对象。<a class="termref" data-lt="accessibility api">无障碍 API</a> 定义了区别于 DOM 接口的接口。</p>
+    </dd>  
+    <dt><dfn data-lt="ontology">本体</dfn></dt>
     <dd>
-      <p>A description of the characteristics of <a class="termref" data-lt="class">classes</a> and how they relate to each other.</p>
+      <p>一段<a class="termref" data-lt="class">类</a>的特征的描述以及它们之间如何相关联。</p>
     </dd>
-    <dt><dfn>Operable</dfn></dt>
+    <dt><dfn data-lt="operable">可操作性</dfn></dt>
     <dd>
-      <p>Usable by users in ways they can control. References in this document relate to <cite><a href="http://www.w3.org/TR/WCAG20/#operable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0 Principle 2: Content must be operable</a></cite> [[WCAG20]]. See <a>Keyboard Accessible</a>.</p>
+      <p>可以以用户可以控制的方式使用。这份文档中的引用关联了 <cite><a href="https://www.w3.org/Translations/WCAG20-zh/#operable"><abbr title="Web Content Accessibility Guidelines (网页内容无障碍指南)">WCAG</abbr> 2.0 原则2：可操作性-内容必须可操作</a></cite> [[WCAG20]]。更多可查阅<a>键盘无障碍</a>。</p>
     </dd>
-    <dt><dfn data-lt="owned element|owned|owned element's|owned elements">Owned Element</dfn></dt>
+    <dt><dfn data-lt="owned element|owned|owned element's|owned elements">被拥有的元素</dfn></dt>
     <dd>
-      <p>An 'owned element' is any <abbr title="Document Object Model">DOM</abbr> descendant of the <a>element</a>, any element specified as a child via <pref>aria-owns</pref>, or any <abbr title="Document Object Model">DOM</abbr> descendant of the owned child.</p>
+      <p>一个“被拥有的元素”是这个<a>element</a>的任何 <abbr title="Document Object Model (文档对象模型)">DOM</abbr> 后代、任何通过 <pref>aria-owns</pref> 指定为子元素的元素、或这个被拥有的子元素的任何 <abbr title="Document Object Model (文档对象模型)">DOM</abbr> 后代。</p>
     </dd>
-    <dt><dfn data-lt="owning element|owning">Owning Element</dfn></dt>
+    <dt><dfn data-lt="owning element|owning">拥有元素</dfn></dt>
     <dd>
-      <p>An 'owning element' is any <abbr title="Document Object Model">DOM</abbr> ancestor of the <a>element</a>, or any element with an <pref>aria-owns</pref> attribute which references the ID of the   element. </p>
+      <p>一个“拥有元素”是这个<a>元素</a>的任一 <abbr title="Document Object Model (文档对象模型)">DOM</abbr> 的祖先、或任何带有引用这个元素的一个 <pref>aria-owns</pref> attribute 的元素。</p>
     </dd>
-    <dt><dfn>Perceivable</dfn></dt>
+    <dt><dfn data-lt="perceivable">可感知</dfn></dt>
     <dd>
-      <p>Presentable to users in ways they can sense. References in this document relate to <cite><a href="http://www.w3.org/TR/WCAG20/#perceivable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0 Principle 1: Content must be perceivable</a></cite> [[WCAG20]].</p>
+      <p>可以以用户可以感受到方式展示出来。这份文档中的引用关联了 <cite><a href="https://www.w3.org/Translations/WCAG20-zh/#perceivable"><abbr title="Web Content Accessibility Guidelines (网页内容无障碍指南)">WCAG</abbr> 2.0 原则1：可感知性-内容必须可感知</a></cite> [[WCAG20]]。</p>
     </dd>
     <dt><dfn data-lt="property|properties">Property</dfn></dt>
     <dd>
-      <p><a class="termref" data-lt="attribute">Attributes</a> that are essential to the nature of a given <a>object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, <pref>aria-multiline</pref>) are less likely to change than <a class="termref" href="#dfn-state">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as <pref>aria-activedescendant</pref>, <pref>aria-valuenow</pref>, and <pref>aria-valuetext</pref> are expected to change often. See <a href="http://www.w3.org/TR/wai-aria/states_and_properties#statevsprop">clarification of states versus properties</a>.</p>
+      <p>一个给定<a>对象</a>所必需的 <a class="termref" data-lt="attribute">attribute</a>，或代表一个和对象相关联的数据值。一个 property 的改变可能会现住地影响一个对象的意义或展示。确定的 property (例如 <pref>aria-multiline</pref>) 比 <a class="termref" href="#dfn-state">state</a> 更稳定，更不会发生改变，但是注意变更的频度并不是一条规则。一些 property，诸如 <pref>aria-activedescendant</pref>、<pref>aria-valuenow</pref> 和 <pref>aria-valuetext</pref> 也是经常改变的。查阅<a href="http://www.w3.org/TR/wai-aria/states_and_properties#statevsprop">对 state 和 property 的澄清</a>了解更多。</p>
     </dd>
-    <dt><dfn data-lt="relationship|relationships">Relationship</dfn></dt>
+    <dt><dfn data-lt="relationship|relationships">联系</dfn></dt>
     <dd>
-      <p>A connection between two distinct things. Relationships may be of various types to indicate which <a>object</a> labels another, controls another, etc.</p>
+      <p>两个不同事物之间的连接。联系表示方式的可以是多种类型的，例如一个<a>对象</a>标记了或控制了另一个对象等。</p>
     </dd>
-    <dt><dfn data-lt="role|roles">Role</dfn></dt>
+    <dt><dfn data-lt="role|roles">角色</dfn></dt>
     <dd>
-      <p>Main indicator of type. <!-- (removing, vague) The object's role is the class of <a class="termref" data-lt="object">objects</a> of which it is a member. --> This <a class="termref" data-lt="semantics">semantic</a> association allows tools to present and support interaction with the object in a manner that is consistent with user expectations about other objects of that type.</p>
+      <p>主要的标识类型。这个<a class="termref" data-lt="semantics">语义</a>关系允许工具展示并支持和对象的交互方式，以符合用户对同类对象的预期。</p>
     </dd>
-    <dt><dfn>Root <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> node</dfn></dt>
+    <dt><dfn data-lt="root wai-aria node">根 <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> 结点</dfn></dt>
     <dd>
-      <p> The primary element containing non-metadata content. In many languages, this is  the document element but in <abbr title="Hypertext Markup Language">HTML</abbr>, it is the <code>&lt;body&gt;</code>.</p>
+      <p>包含了非元数据的内容的主要元素。在许多语言中，这就是文档元素，但是在 <abbr title="Hypertext Markup Language (超文本标记语言)">HTML</abbr> 中是 <code>&lt;body&gt;</code>。</p>
     </dd>
-    <dt><dfn data-lt="semantics|semantic|semantically">Semantics</dfn></dt>
+    <dt><dfn data-lt="semantics|semantic|semantically">语义</dfn></dt>
     <dd>
-      <p>The meaning of something as understood by a human, defined in a way that computers can process a representation of an <a>object</a>, such as <a class="termref" data-lt="element">elements</a> and <a class="termref" data-lt="attribute">attributes</a>, and reliably represent the object in a way that various humans will achieve a mutually consistent understanding of the object.</p>
+      <p>一些对人类来说可以理解的意思，以计算机可以处理的<a>对象</a>展示的方式被定义，例如<a class="termref" data-lt="element">元素</a>和 <a class="termref" data-lt="attribute">attribute</a>，并以各类人都可以相互理解的对象的方式可靠地展示对象。</p>
     </dd>
     <dt><dfn data-lt="state|states">State</dfn></dt>
     <dd>
-      <p>A state is a dynamic <a class="termref" href="#dfn-property">property</a> expressing characteristics of an <a>object</a> that may change in response to user action or automated processes. States do not affect the essential nature of the object, but represent data associated with the object or user interaction possibilities. See <a href="http://www.w3.org/TR/wai-aria/states_and_properties#statevsprop">clarification of states versus properties</a>.</p>
+      <p>一个 state 是表示一个<a>对象</a>特征的动态的 <a class="termref" href="#dfn-property">property</a>，可能会由于用户交互或自动化流程而改变。State 不会影响对象的必然本质，但是会展示关系到对象或用户交互可能性的数据。查阅<a href="http://www.w3.org/TR/wai-aria/states_and_properties#statevsprop">对 state 和 property 的澄清</a>了解更多。</p>
     </dd>
-    <dt><dfn>Sub-document</dfn></dt>
+    <dt><dfn data-lt="sub-document">子文档</dfn></dt>
     <dd>
-      <p>Any document created from a <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code> or similar mechanism. A sub-document may contain a document, an application or any widget such as a calendar pulled in from another server. In the <a>accessibility tree</a> there are two <a class="termref" data-lt="accessible object">accessible objects</a> for this situation&mdash;one represents the <code>&lt;frame&gt;</code>/<code>&lt;iframe&gt;</code> element in the parent document, which parents a single <a>accessible object</a> child representing the spawned document contents.</p>
+      <p>任何通过 <code>&lt;frame&gt;</code>、<code>&lt;iframe&gt;</code> 或类似机制创建出来的文档。一个子文档可能包含一个文档、一个应用或任何挂件，诸如从另一个服务器拉来的日历。在<a>无障碍树</a>中，有两种这样情况的<a class="termref" data-lt="accessible object">无障碍对象</a>——一个代表了父级文档中的 <code>&lt;frame&gt;</code>/<code>&lt;iframe&gt;</code> 元素，该父级文档是一个<a>无障碍对象</a>子级内容，代表了衍生出来的文档内容。</p>
     </dd>
-    <dt><dfn>Target Element</dfn></dt>
+    <dt><dfn data-lt="target Element">目标元素</dfn></dt>
     <dd>
-      <p>An element specified in a <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> relation. For example, in <code> &lt;div aria-controls=”elem1”&gt;</code>, where <code>“elem1”</code> is the ID for the target element.</p>
+      <p>一个在 <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> 关系描述中被指定的元素。例如 <code>&lt;div aria-controls="elem1"&gt;</code> 中的 <code>"elem1"</code> 是这个目标元素的 ID。</p>
     </dd>
-    <dt><dfn>Taxonomy</dfn></dt>
+    <dt><dfn data-lt="taxonomy">分类系统</dfn></dt>
     <dd>
-      <p>A hierarchical definition of how the characteristics of various <a class="termref" data-lt="class">classes</a> relate to each other, in which classes inherit the properties of superclasses in the hierarchy. A taxonomy can comprise part of the formal definition of an <a>ontology</a>.</p>
+      <p>一个对于多种<a class="termref" data-lt="class">类</a>之间关系的分级的定义。分类系统中的类的属性继承自它的超类。一个分类系统可以构成一部分<a>本体</a>的正式定义。</p>
     </dd>
-    <dt><dfn>Text node</dfn></dt>
+    <dt><dfn data-lt="text node">文本结点</dfn></dt>
     <dd>
-      <p>Type of <abbr title="Document Object Model">DOM</abbr> <a class="termref" data-lt="node">node</a> that represents the textual content of an <a class="termref">attribute</a> or an <a class="termref">element</a>. A Text node has no child nodes.  </p>
+      <p><abbr title="Document Object Model (文档对象模型)">DOM</abbr> <a class="termref" data-lt="node">结点</a>的一种，代表一个 <a class="termref">attribute</a> 或<a class="termref">元素</a>的文本内容。文本结点没有任何子结点。</p>
     </dd>
-    <dt><dfn>Tooltip attribute</dfn></dt>
+    <dt><dfn data-lt="tooltip attribute">工具提示 attribute</dfn></dt>
     <dd>
-      <p>Any host language attribute that would result in a user agent generating a tooltip such as in response to a mouse hover in desktop user agents.</p>
+      <p>会让一个用户代理生成工具提示的任何宿主语言的 attribute，例如桌面端用户代理中对鼠标悬停的响应。</p>
     </dd>
-    <dt><dfn>Understandable</dfn></dt>
+    <dt><dfn data-lt="understandable">可理解性</dfn></dt>
     <dd>
-      <p>Presentable to users in ways they can construct an appropriate meaning. References in this document relate to <cite><a href="http://www.w3.org/TR/WCAG20/#understandable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0 Principle 3: Information and the operation of user interface must be understandable</a></cite> [[WCAG20]].</p>
+      <p>可以展示给用户并使其产生结构化含义。这份文档中的引用关联了 <cite><a href="https://www.w3.org/Translations/WCAG20-zh/#understandable"><abbr title="Web Content Accessibility Guidelines (网页内容无障碍指南)">WCAG</abbr> 2.0 原则3：信息和用户界面操作必须是可理解的</a></cite> [[WCAG20]]。</p>
     </dd>
-    <dt><dfn data-lt="user agent|user agents">User Agent</dfn></dt>
+    <dt><dfn data-lt="user agent|user agents">用户代理</dfn></dt>
     <dd>
-      <p>Any software that retrieves, renders and facilitates end user interaction with Web content. This definition may differ from that used in other documents.</p>
+      <p>任何获取、渲染、促使最终用户和 web 内容交互的软件。这个定义可能和其它文档中的定义有所不同。</p>
     </dd>
-    <dt><dfn>Valid IDREF</dfn></dt>
+    <dt><dfn data-lt="valid idref">有效的 IDREF</dfn></dt>
     <dd>
-      <p>A reference to a target element in the same document that has a matching ID</p>
+      <p>一个匹配同一个文档中目标元素 ID 的引用。</p>
     </dd>
-    <dt><dfn data-lt="widget|widgets">Widget</dfn></dt>
+    <dt><dfn data-lt="widget|widgets">挂件</dfn></dt>
     <dd>
-      <p>Discrete user interface <a class="termref" href="#dfn-object">object</a> with which the user can interact. Widgets range from simple objects that have one value or operation (e.g., check boxes and menu items), to complex objects that contain many managed sub-objects (e.g., trees and grids).</p>
+      <p>用户可交互的分离的用户界面<a class="termref" href="#dfn-object">对象</a>。挂件既包含了只有一个值或操作的简单的对象 (如复选框或菜单项)，也包含了管理很多子对象的复杂对象 (例如树或网格)。</p>
     </dd>
   </dl>
